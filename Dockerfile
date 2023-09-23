@@ -6,6 +6,8 @@ COPY .env.local .env.local
 
 # ---- Dependencies ----
 FROM base AS dependencies
+# Install python, make, and g++ for native module builds
+RUN apk add --no-cache python3 make g++
 RUN npm ci
 
 # ---- Build ----

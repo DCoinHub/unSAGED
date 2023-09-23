@@ -3,11 +3,11 @@ import { FolderInterface } from './folder';
 import { Prompt } from './prompt';
 import { SystemPrompt } from './system-prompt';
 
-export type SupportedExportFormats = UnsagedExportFormatV1;
-export type LatestExportFormat = UnsagedExportFormatV1;
+export type SupportedExportFormats = AgentXExportFormatV1;
+export type LatestExportFormat = AgentXExportFormatV1;
 
-export interface UnsagedExportFormatV1 {
-  app: 'unSAGED';
+export interface AgentXExportFormatV1 {
+  app: 'AgentX';
   version: 1;
   conversations: Conversation[];
   folders: FolderInterface[];
